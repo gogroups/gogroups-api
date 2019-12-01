@@ -140,7 +140,7 @@ $i = 0; //counter
 
 	public function get_active_sellers(){
 
-		$query = "SELECT `users`.`user_id`,`users`.`zipcode`,`users`.`email`,`users`.`seller_tinNo`,`users`.`seller_secondary_name`,`users`.`seller_secondary_email`,`users`.`seller_secondary_contact`,`users`.`seller_usp`, `users`.`name`, `users`.`lastName`, `users`.`seller_companyName`, `users`.`location`, `users`.`contact_number`, CASE WHEN `advertisements`.`status` IN('approved', 'rejected') THEN COUNT(`advertisements`.`createdby_userid`) ELSE 0 END as Total, `login`.`Status` FROM `users` JOIN `login` ON `users`.`user_id` = `login`.`user_id` LEFT JOIN `advertisements` ON `users`.`user_id`=`advertisements`.`createdby_userid` WHERE `users`.`user_type` = 'Seller' GROUP BY `users`.`user_id` ORDER BY `users`.`user_id` DESC";
+		$query = "SELECT `users`.`user_id`,`users`.`zipcode`,`users`.`email`,`users`.`seller_tinNo`,`users`.`seller_secondary_name`,`users`.`seller_secondary_email`,`users`.`seller_secondary_contact`,`users`.`seller_usp`, `users`.`name`, `users`.`lastName`, `users`.`seller_companyName`, `users`.`location`, `users`.`contact_number`, CASE WHEN `advertisements`.`status` IN('approved', 'rejected') THEN COUNT(`advertisements`.`createdby_userid`) ELSE 0 END as Total, `login`.`Status` FROM `users` JOIN `login` ON `users`.`user_id` = `login`.`user_id` LEFT JOIN `advertisements` ON `users`.`user_id`=`advertisements`.`createdby_userid` WHERE `users`.`user_type` = 'Seller' ORDER BY `users`.`user_id` DESC";
 
 
 		$result = $this->db->query($query)->result();

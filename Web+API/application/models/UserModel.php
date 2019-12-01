@@ -119,8 +119,7 @@ $i = 0; //counter
 							   ->join('groups','users.user_id=groups.created_by','left')
 							   ->join('report_advertisements','report_advertisements.advertisement_id = users.user_id','left')
 							   ->where('login.user_type','User')							  
-							   ->group_by('users.user_id')
- 							   ->get('users')
+							   ->get('users')
 							   ->result();
 							  // print_r($this->db->last_query());die;
 
