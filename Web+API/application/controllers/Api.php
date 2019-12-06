@@ -322,13 +322,12 @@ class Api extends REST_Controller {
 
               log_message('debug',print_r($message,TRUE));
 
-              $result = $this->email->send();
+			  $this->email->send();
+			  
+			  echo $this->email->print_debugger();
 
 			  log_message('debug',print_r($to,TRUE));
-			  log_message('debug_smtp',print_r($result,TRUE));
-
-
-
+			
 	}
 
 	public function send_mail_superadmin($message,$subject)
