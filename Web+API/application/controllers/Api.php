@@ -320,11 +320,12 @@ class Api extends REST_Controller {
               // Message in email
               $this->email->message($message);
 
-               log_message('debug',print_r($message,TRUE));
+              log_message('debug',print_r($message,TRUE));
 
-              $this->email->send();
+              $result = $this->email->send();
 
-           //  log_message('debug',print_r($to,TRUE));
+			  log_message('debug',print_r($to,TRUE));
+			  log_message('debug_smtp',print_r($result,TRUE));
 
 
 
