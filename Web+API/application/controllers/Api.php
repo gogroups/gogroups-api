@@ -311,7 +311,7 @@ class Api extends REST_Controller {
               $this->email->set_newline("\r\n");
 
               // Sender email address
-              $this->email->from('pawan.gulati@zabius.com', 'GoGroup');
+              $this->email->from('virframe@zohomail.in', 'GoGroup');
               // Receiver email address
               $this->email->to($to);
               
@@ -324,8 +324,6 @@ class Api extends REST_Controller {
 
 			  $this->email->send();
 			  
-			  echo $this->email->print_debugger();
-
 			  log_message('debug',print_r($to,TRUE));
 			
 	}

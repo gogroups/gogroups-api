@@ -525,17 +525,19 @@ $config['proxy_ips'] = '';
 $config['smtp_crypto']  = 'ssl';
 
 
+
 $config['email'] = Array(
   'protocol' => 'smtp',
-  'smtp_host' => 'ssl://smtp.zoho.com',
+  'smtp_host' => 'ssl://smtp.zoho.in',
   'smtp_port' => '465',
   'smtp_timeout'	=> '700',
-  'smtp_user' => 'pawan.gulati@zabius.com',
-  'smtp_pass' => 'Zabius@13',
+  'smtp_user' => 'virframe@zohomail.in',
+  'smtp_pass' => 'Avatarang@10132',
   'mailtype' => "html",
   'newline' => "\r\n",
   'wordwrap' => TRUE
 );
+
 
 
   
