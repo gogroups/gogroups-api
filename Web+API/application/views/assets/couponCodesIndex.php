@@ -99,7 +99,7 @@ $('#couponCodeTable tbody tr .ads_details').click(function(){
 	              	$('#total_views_adv').html(data['total_views']);
 	              	$('#actual_price').html('INR '+data['ads_details'][0]['actual_price']);
 	              	$('#offer_price').html('INR '+data['ads_details'][0]['offer_price']);
-	              	$('#offerfortwo').html(data['ads_details'][0]['offerfortwo']);
+	              	$('#cashback_per_user').html(data['ads_details'][0]['cashback_per_user']);
 	              	$('#start_date').html(data['ads_details'][0]['start_date']);
 	              	$('#end_date').html(data['ads_details'][0]['end_date']);
 	              	$('#ad_detail').html(data['ads_details'][0]['advertisement_details']);

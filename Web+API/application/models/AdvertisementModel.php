@@ -10,7 +10,7 @@ class AdvertisementModel extends CI_Model {
 
 
 
-		$query = "SELECT `advertisements`.`advertisement_id`,`advertisements`.`advertisement_name`,`advertisements`.`advertisement_details`,`advertisements`.`offerfortwo`, `users`.`name`, `users`.`lastName`, `categories`.`category_title`, `subcategories`.`subcategory_title`, `advertisements`.`start_date`, `advertisements`.`end_date`, `report_advertisements`.`comments`, `advertisements`.`status`, `advertisements`.`is_approved`, `users`.`user_id`
+		$query = "SELECT `advertisements`.`advertisement_id`,`advertisements`.`advertisement_name`,`advertisements`.`advertisement_details`,`advertisements`.`cashback_per_user`, `users`.`name`, `users`.`lastName`, `categories`.`category_title`, `subcategories`.`subcategory_title`, `advertisements`.`start_date`, `advertisements`.`end_date`, `report_advertisements`.`comments`, `advertisements`.`status`, `advertisements`.`is_approved`, `users`.`user_id`
 			FROM `advertisements`
 			JOIN `users` ON `users`.`user_id` = `advertisements`.`createdby_userid`
 			LEFT JOIN `categories` ON `categories`.`category_id` = `advertisements`.`category_id`

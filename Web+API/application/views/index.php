@@ -407,7 +407,7 @@
 
                                 <div class="row">
                                     <div class="col-md-3">Price for 2:</div>
-                                    <div class="col-md-9" id="offerfortwo"></div>
+                                    <div class="col-md-9" id="cashback_per_user"></div>
                                 </div>
 
                                 <div class="row">

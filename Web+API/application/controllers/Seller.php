@@ -156,7 +156,7 @@ class Seller extends api {
                             'location'=>$row->location,
                              'actual_price'=>$row->actual_price,
                             'offer_price'=>$row->offer_price,
-                            'offerfortwo'=>$row->offerfortwo,
+                            'cashback_per_user'=>$row->cashback_per_user,
                             'offerforx'=>$row->offerforx,
                             'purchasedCount'=>$this->SellerModel->get_purchasedCount($row->advertisement_id),
                             'pendingCount'=>$this->SellerModel->get_pendiingCount($row->advertisement_id),

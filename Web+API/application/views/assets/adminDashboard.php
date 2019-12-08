@@ -323,7 +323,7 @@ $("#RejectGroup").validate({
 	              	$('#user_count').html(data[0]['user_count']);
 	              	$('#actual_price').html('INR '+data[0]['actual_price']);
 	              	$('#offer_price').html('INR '+data[0]['offer_price']);
-	              	$('#offerfortwo').html(data[0]['offerfortwo']);
+	              	$('#cashback_per_user').html(data[0]['cashback_per_user']);
 	              	$('#start_date').html(data[0]['start_date']);
 	              	$('#end_date').html(data[0]['end_date']);
 	              	$('#last_edited').html(data[0]['HistoryOfChange']);
