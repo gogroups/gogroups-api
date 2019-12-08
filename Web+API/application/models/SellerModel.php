@@ -19,7 +19,7 @@ class SellerModel extends CI_Model{
 				'status' => 'unapproved',
 				'actual_price'=>$data['actual_price'],
 				'offer_price'=>$data['offer_price'],
-                'cashback_per_user'=>$data['costfor_two']
+                'cashback_per_user'=>$data['cashback_per_user']
                 //'offerforx'=>$data['costfor_x']
 			);
 
@@ -198,7 +198,7 @@ $query = $this->db->query($condition)->result();
 				'actual_price'=>$data['actual_price'],
                 'offer_price'=>$data['offer_price'],
                 //`offerforx` => $data['offerforx'],
-				'cashback_per_user'=>$data['costfor_two']
+				'cashback_per_user'=>$data['cashback_per_user']
 				
 			);
 		$query = $this->db->where('advertisement_id',$data['advertisement_id'])
