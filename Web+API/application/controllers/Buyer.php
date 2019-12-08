@@ -560,7 +560,7 @@ $details[] = array(
                              'actual_price'=>$row->actual_price,
                             'offer_price'=>$row->offer_price,
                             'cashback_per_user'=>$row->cashback_per_user,
-			    'offerforx'=>$row->offerforx,
+			    //'offerforx'=>$row->offerforx,
 			    'quantity_per_user'=>$row->quantity_per_user,
                             'coupon_code' => $coupon_code_details,
                             'purchasedCount'=>$this->SellerModel->get_purchasedCount($row->advertisement_id),
@@ -1510,7 +1510,7 @@ $details[] = array(
                             'isRatingOption'=>$this->BuyerModel->isratingoption($user_id,$result->advertisement_id),
                               'purchased_date'=>$result->purchased_date,
 	      		'is_approved' => $result->is_approved,
-	      		'offerforx' => $result->offerforx,
+	      		//'offerforx' => $result->offerforx,
 	      		'quantity'=>$result->quantity
                         );
     }

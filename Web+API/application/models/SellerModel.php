@@ -19,8 +19,8 @@ class SellerModel extends CI_Model{
 				'status' => 'unapproved',
 				'actual_price'=>$data['actual_price'],
 				'offer_price'=>$data['offer_price'],
-                'cashback_per_user'=>$data['costfor_two'],
-                'offerforx'=>$data['costfor_x']
+                'cashback_per_user'=>$data['costfor_two']
+                //'offerforx'=>$data['costfor_x']
 			);
 
 		$query = $this->db->insert('advertisements',$data1);
@@ -75,7 +75,7 @@ class SellerModel extends CI_Model{
 /*********** get all advertisement by user id from advertisements table **********/
 	public function get_all_advertisements($user_id,$data){
 
-$condition = "SELECT `advertisements`.`advertisement_id`,`advertisements`.`advertisement_name`,`advertisements`.`actual_price`,`advertisements`.`offer_price`,`advertisements`.`cashback_per_user`, `advertisements`.`offerforx`  ,`advertisements`.`min_user_count`, `advertisements`.`status`, date_format(`advertisements`.`end_date`, '%e %M %Y') as end_date, `advertisement_statics`.`views_count`, `advertisement_statics`.`group_count`, date_format(`advertisements`.`start_date`, '%e %M %Y') as start_date, `advertisements`.`advertisement_details`, `advertisement_statics`.`views_count`, `advertisement_statics`.`group_count`, `categories`.`category_title`, `subcategories`.`subcategory_title`, `subcategories2`.`subcategory_title2`, `subcategories3`.`subcategory_title3`, `subcategories4`.`subcategory_title4`, `subcategories5`.`subcategory_title5`, `advertisements`.`location`,`advertisements`.`category_id`,`advertisements`.`subcategory_id`,`advertisements`.`subcategory2_id`,`advertisements`.`subcategory3_id`,`advertisements`.`subcategory4_id`,`advertisements`.`subcategory5_id`
+$condition = "SELECT `advertisements`.`advertisement_id`,`advertisements`.`advertisement_name`,`advertisements`.`actual_price`,`advertisements`.`offer_price`,`advertisements`.`cashback_per_user`,`advertisements`.`min_user_count`, `advertisements`.`status`, date_format(`advertisements`.`end_date`, '%e %M %Y') as end_date, `advertisement_statics`.`views_count`, `advertisement_statics`.`group_count`, date_format(`advertisements`.`start_date`, '%e %M %Y') as start_date, `advertisements`.`advertisement_details`, `advertisement_statics`.`views_count`, `advertisement_statics`.`group_count`, `categories`.`category_title`, `subcategories`.`subcategory_title`, `subcategories2`.`subcategory_title2`, `subcategories3`.`subcategory_title3`, `subcategories4`.`subcategory_title4`, `subcategories5`.`subcategory_title5`, `advertisements`.`location`,`advertisements`.`category_id`,`advertisements`.`subcategory_id`,`advertisements`.`subcategory2_id`,`advertisements`.`subcategory3_id`,`advertisements`.`subcategory4_id`,`advertisements`.`subcategory5_id`
 FROM `advertisements`
 LEFT JOIN `advertisement_statics` ON `advertisement_statics`.`advertisement_id` = `advertisements`.`advertisement_id`
 LEFT JOIN `categories` ON `categories`.`category_id` = `advertisements`.`category_id`
@@ -128,7 +128,7 @@ $query = $this->db->query($condition)->result();
 
 /************ get particulaer advertisement details by advertisement id *************/
 	public function get_advertisement_by_id($id){
-		return $this->db->select('advertisements.advertisement_id,advertisements.quantity_per_user,advertisements.offerforx,advertisements.advertisement_name,advertisements.cashback_per_user,advertisements.actual_price,advertisements.offer_price,advertisements.min_user_count,advertisements.status,date_format(advertisements.end_date,"%e %M %Y") as end_date,date_format(advertisements.start_date,"%e %M %Y") as start_date,advertisements.advertisement_details,advertisement_statics.views_count,advertisement_statics.group_count,categories.category_title,subcategories.subcategory_title,subcategories2.subcategory_title2,subcategories3.subcategory_title3,subcategories4.subcategory_title4,subcategories5.subcategory_title5,advertisements.location,advertisements.category_id,advertisements.subcategory_id,advertisements.subcategory2_id,advertisements.subcategory3_id,advertisements.subcategory4_id,advertisements.subcategory5_id')
+		return $this->db->select('advertisements.advertisement_id,advertisements.quantity_per_user,advertisements.advertisement_name,advertisements.cashback_per_user,advertisements.actual_price,advertisements.offer_price,advertisements.min_user_count,advertisements.status,date_format(advertisements.end_date,"%e %M %Y") as end_date,date_format(advertisements.start_date,"%e %M %Y") as start_date,advertisements.advertisement_details,advertisement_statics.views_count,advertisement_statics.group_count,categories.category_title,subcategories.subcategory_title,subcategories2.subcategory_title2,subcategories3.subcategory_title3,subcategories4.subcategory_title4,subcategories5.subcategory_title5,advertisements.location,advertisements.category_id,advertisements.subcategory_id,advertisements.subcategory2_id,advertisements.subcategory3_id,advertisements.subcategory4_id,advertisements.subcategory5_id')
                           ->join('advertisement_statics','advertisement_statics.advertisement_id = advertisements.advertisement_id','left')
                           ->join('categories','categories.category_id = advertisements.category_id','left')
                           ->join('subcategories','subcategories.subcategory_id = advertisements.subcategory_id','left')
@@ -197,7 +197,7 @@ $query = $this->db->query($condition)->result();
 				'subcategory5_id'=>$data['subcategory_id5'],
 				'actual_price'=>$data['actual_price'],
                 'offer_price'=>$data['offer_price'],
-                `offerforx` => $data['offerforx'],
+                //`offerforx` => $data['offerforx'],
 				'cashback_per_user'=>$data['costfor_two']
 				
 			);
