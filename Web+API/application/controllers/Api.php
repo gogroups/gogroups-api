@@ -339,9 +339,9 @@ class Api extends REST_Controller {
             $this->email->set_newline("\r\n");
 
               // Sender email address
-            $this->email->from('pawan.gulati@zabius.com', 'GoGroup');
+            $this->email->from('virframe@zohomail.in', 'GoGroup');
               // Receiver email address
-            $this->email->to('pawan.gulati@zabius.com');
+            $this->email->to('virframe@zohomail.in');
               
               // Subject of email
             $this->email->subject($subject);

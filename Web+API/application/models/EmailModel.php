@@ -12,7 +12,7 @@ class EmailModel extends CI_Model {
  //           -> where('user_id', $seller_id)
  //           -> get('users')->row();    
          
- //        $from_email = "pawan.gulati@zabius.com"; 
+ //        $from_email = "virframe@zohomail.in"; 
  //         //$to_email = $this->input->post('email'); 
 
  //   		$to_email = $query->email; 
@@ -43,8 +43,8 @@ class EmailModel extends CI_Model {
   //        //$to_email = $this->input->post('email'); 
   //    // $to_email = $query->email;
      
-  //      $from_email = "pawan.gulati@zabius.com"; 
-  //     //$to_email = "pawan.gulati@zabius.com"; 
+  //      $from_email = "virframe@zohomail.in"; 
+  //     //$to_email = "virframe@zohomail.in"; 
    
   //        $this->email->set_newline("\r\n");
   //        $this->email->from($from_email, 'Pawan Gulati'); 
@@ -65,7 +65,7 @@ class EmailModel extends CI_Model {
   //          -> select('*')
   //          -> where('user_id', $user_id)
   //          -> get('users')->row();  
-  //       $from_email = "pawan.gulati@zabius.com"; 
+  //       $from_email = "virframe@zohomail.in"; 
   //        //$to_email = $this->input->post('email'); 
   //     $to_email = $query->email; 
    
@@ -88,7 +88,7 @@ class EmailModel extends CI_Model {
   //          -> where('user_id', $user_id)
   //          -> get('users')->row();    
          
-  //       $from_email = "pawan.gulati@zabius.com"; 
+  //       $from_email = "virframe@zohomail.in"; 
   //        //$to_email = $this->input->post('email'); 
   //     $to_email = $query->email; 
    
@@ -107,7 +107,7 @@ class EmailModel extends CI_Model {
 
         $query = $this->db->select('*')->where('user_id', $seller_id)->get('users')->row();    
          
-        $from_email = "pawan.gulati@zabius.com"; 
+        $from_email = "virframe@zohomail.in"; 
          //$to_email = $this->input->post('email'); 
         $to_email = $query->email; 
 
@@ -126,7 +126,7 @@ class EmailModel extends CI_Model {
 
         $query = $this->db->select('*')->where('user_id', $data['seller_id'])->get('users')->row();    
          
-        $from_email = "pawan.gulati@zabius.com"; 
+        $from_email = "virframe@zohomail.in"; 
          //$to_email = $this->input->post('email'); 
         $to_email = $query->email; 
 
@@ -146,7 +146,7 @@ class EmailModel extends CI_Model {
 
         $query = $this->db->select('*')->where('user_id', $user_id)->get('users')->row();    
          
-        $from_email = "pawan.gulati@zabius.com"; 
+        $from_email = "virframe@zohomail.in"; 
          //$to_email = $this->input->post('email'); 
         $to_email = $query->email; 
 
@@ -168,7 +168,7 @@ class EmailModel extends CI_Model {
  $query = $this->db->select('*')->where('user_id', $seller_id)->get('users')->row();  
 
      
-       $from_email = "pawan.gulati@zabius.com"; 
+       $from_email = "virframe@zohomail.in"; 
       $to_email = $query->email; 
 
    
@@ -191,7 +191,7 @@ class EmailModel extends CI_Model {
 
   
      
-       $from_email = "pawan.gulati@zabius.com"; 
+       $from_email = "virframe@zohomail.in"; 
       $to_email = $query->email; 
 
    
@@ -213,7 +213,7 @@ class EmailModel extends CI_Model {
  $query = $this->db->select('*')->where('user_id', $seller_id)->get('users')->row();  
 
  
-       $from_email = "pawan.gulati@zabius.com"; 
+       $from_email = "virframe@zohomail.in"; 
       $to_email = $query->email; 
 
    
@@ -236,7 +236,7 @@ class EmailModel extends CI_Model {
 
   
      
-       $from_email = "pawan.gulati@zabius.com"; 
+       $from_email = "virframe@zohomail.in"; 
       $to_email = $query->email; 
 
    

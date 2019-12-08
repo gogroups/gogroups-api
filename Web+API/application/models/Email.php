@@ -49,7 +49,7 @@ class Email extends CI_Model {
 //////////////////////end///////////////////////////////////
 
 
-		$this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		$this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($result->seller_email)
 							->subject($subject)
 							->message($message)
@@ -135,7 +135,7 @@ $description="Copun Code".$result->coupon_code. "has been generated for ads".$re
 //////////////////////end///////////////////////////////////
 
 
-		$this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		$this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($result->seller_email)
 							->subject($subject)
 							->message($message)
@@ -226,7 +226,7 @@ $description="You have successfully placed order for". $result->advertisement_na
 //////////////////////end///////////////////////////////////
 
 
-		$this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		$this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($result->seller_email)
 							->subject($subject)
 							->message($message)
@@ -274,8 +274,8 @@ $description="You have succesfully purchased". $result->advertisement_name;
 
 	public function coupon_code_email_superadmin($message,$subject)
 	{	
-		return $this->email->from('pawan.gulati@zabius.com', 'GoGroup')
-							->to('pawan.gulati@zabius.com')
+		return $this->email->from('virframe@zohomail.in', 'GoGroup')
+							->to('virframe@zohomail.in')
 							->subject($subject)
 							->message($message)
 							->set_mailtype('html')
@@ -284,7 +284,7 @@ $description="You have succesfully purchased". $result->advertisement_name;
 
 	public function buyer_order_purchased_email($buyer_email,$message,$subject)
 	{	
-		return $this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		return $this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($buyer_email)
 							->subject($subject)
 							->message($message)
@@ -294,7 +294,7 @@ $description="You have succesfully purchased". $result->advertisement_name;
 
 	public function buyer_coupon_generated_email($buyer_email,$message,$subject)
 	{	
-		return $this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		return $this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($buyer_email)
 							->subject($subject)
 							->message($message)
@@ -304,7 +304,7 @@ $description="You have succesfully purchased". $result->advertisement_name;
 
 	public function buyer_order_placed_email($buyer_email,$message,$subject)
 	{	
-		return $this->email->from('pawan.gulati@zabius.com', 'GoGroup')
+		return $this->email->from('virframe@zohomail.in', 'GoGroup')
 							->to($buyer_email)
 							->subject($subject)
 							->message($message)

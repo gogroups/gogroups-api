@@ -235,16 +235,32 @@ public function get_pendiingCount($advertisement_id){
             return $qnt;
       }
 
-      public function get_purchasedCount($advertisement_id){
+      public function get_purchasedCount($advertisement_id, $user_id){
 
 
-            $query= $this->db->select('coupon_id')                         
-                          ->where('advertisement_id',$advertisement_id)
-                          ->where('status','purchased')
-                          ->get('coupons')
-                          ->result();
+		log_message('debug', $user_id);
+		$userQuery = $this->db->select('coupon_id , purchased_date')
+			->where('advertisement_id', $advertisement_id)
+			->where('status', 'purchased')
+			->where('buyer_id', $user_id)
+			->get('coupons')
+			->result();
 
-            return count($query);
+		log_message('debug', $this->db->last_query());
+		$qnt = 0;
+		foreach ($userQuery as $row) {
+			log_message('debug', $row->purchased_date);
+			$query = $this->db->select('coupon_id')
+				->where('advertisement_id', $advertisement_id)
+				->where('status', 'purchased')
+				->where('purchased_date > ', $row->purchased_date)
+				->get('coupons')
+				->result();
+			$qnt = count($query);
+			break;
+		}
+
+		return $qnt;
       }
        public function get_orderPlacedCount($advertisement_id){
 

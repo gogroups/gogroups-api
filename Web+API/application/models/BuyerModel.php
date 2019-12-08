@@ -212,7 +212,7 @@ AND (`advertisements`.`end_date` >= '" . $currentdate . "'))";
       /********* get advertivertisemet details by advertisement id *************/
       public function get_advertisement_by_id($id)
       {
-            return $this->db->select('advertisements.advertisement_id,advertisements.quantity_per_user,,advertisements.advertisement_name,advertisements.cashback_per_user,advertisements.actual_price,advertisements.offer_price,advertisements.status,advertisements.min_user_count,date_format(advertisements.start_date,"%e %M %Y") as start_date,date_format(advertisements.end_date,"%e %M %Y") as end_date,advertisements.advertisement_details,advertisement_statics.views_count,advertisement_statics.group_count,categories.category_title,subcategories.subcategory_title,subcategories2.subcategory_title2,subcategories3.subcategory_title3,subcategories4.subcategory_title4,subcategories5.subcategory_title5,advertisements.location')
+            $result = $this->db->select('advertisements.advertisement_id,advertisements.quantity_per_user,advertisements.advertisement_name,advertisements.cashback_per_user,advertisements.actual_price,advertisements.offer_price,advertisements.status,advertisements.min_user_count,date_format(advertisements.start_date,"%e %M %Y") as start_date,date_format(advertisements.end_date,"%e %M %Y") as end_date,advertisements.advertisement_details,advertisement_statics.views_count,advertisement_statics.group_count,categories.category_title,subcategories.subcategory_title,subcategories2.subcategory_title2,subcategories3.subcategory_title3,subcategories4.subcategory_title4,subcategories5.subcategory_title5,advertisements.location')
                   ->join('advertisement_statics', 'advertisement_statics.advertisement_id = advertisements.advertisement_id', 'left')
                   ->join('categories', 'categories.category_id = advertisements.category_id', 'left')
                   ->join('subcategories', 'subcategories.subcategory_id = advertisements.subcategory_id', 'left')
@@ -221,10 +221,10 @@ AND (`advertisements`.`end_date` >= '" . $currentdate . "'))";
                   ->join('subcategories4', 'subcategories4.subcategory4_id = advertisements.subcategory4_id', 'left')
                   ->join('subcategories5', 'subcategories5.subcategory5_id = advertisements.subcategory5_id', 'left')
                   ->where('advertisements.advertisement_id', $id)
-                  // ->where('advertisements.status','approved')
-                  // ->where('advertisements.is_approved',1)
                   ->get('advertisements')
                   ->result();
+
+            return $result;
       }
 
       public function getSellerContact($id)
