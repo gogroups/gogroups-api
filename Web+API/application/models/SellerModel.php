@@ -253,7 +253,7 @@ public function get_pendiingCount($advertisement_id){
 			$query = $this->db->select('coupon_id')
 				->where('advertisement_id', $advertisement_id)
 				->where('status', 'purchased')
-				->where('purchased_date > ', $row->purchased_date)
+				->where('purchased_date >=', $row->purchased_date)
 				->get('coupons')
 				->result();
 			$qnt = count($query);
