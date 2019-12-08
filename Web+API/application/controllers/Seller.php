@@ -158,7 +158,7 @@ class Seller extends api {
                             'offer_price'=>$row->offer_price,
                             'cashback_per_user'=>$row->cashback_per_user,
                             //'offerforx'=>$row->offerforx,
-                            'purchasedCount'=>$this->SellerModel->get_purchasedCount($row->advertisement_id),
+                            'purchasedCount'=>$this->SellerModel->get_purchasedCount($row->advertisement_id, $user_id),
                             'pendingCount'=>$this->SellerModel->get_pendiingCount($row->advertisement_id),
                             'orderPlacedCount'=>$this->SellerModel->get_orderPlacedCount($row->advertisement_id),
                             'likedcount' => $result,
